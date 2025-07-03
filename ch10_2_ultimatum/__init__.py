@@ -41,7 +41,7 @@ class C(BaseConstants):
         [0, "あなた0ポイント"],
     ]
 
-    CHOICE_LIST_GOTE = [[0, "承諾"], [1, "拒否"]]
+    CHOICE_LIST_GOTE = [[0, "承諾する"], [1, "拒否する"]]
 
 
 class Subsession(BaseSubsession):
