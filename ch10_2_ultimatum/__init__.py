@@ -9,7 +9,7 @@ class C(BaseConstants):
     NAME_IN_URL = "ch10_2_ultimatum"
     PLAYERS_PER_GROUP = 2
     NUM_ROUNDS = 1
-    ENDOWMENT = 1000
+    ENDOWMENT = 10
     INSTRUCTIONS_TEMPLATE = "ch10_2_ultimatum/instructions.html"
     ADD_TIME = 180
 
