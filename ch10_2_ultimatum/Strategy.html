@@ -3,14 +3,14 @@
 {{ endblock }}
 {{ block content }}
 
-【質問１：あなたがプレイヤー１（先手）となったとします。】
-プレイヤー２（後手）に提案する配分を決定してください。
+【質問１：あなたが提案者となったとします。】
+応答者に提案する配分を決定してください。
 {% formfield player.tmp_first_player %}
 {% formfield player.tmp_first_player_why %}
 <br><br>
 
 
-【質問２：あなたが後手となったとします。】
+【質問２：あなたが応答者となったとします。】
 あなたに配分される金額がいくら以上であればその提案を受け入れますか？
 {% formfield player.tmp_second_player %}
 {% formfield player.tmp_second_player_why %}
