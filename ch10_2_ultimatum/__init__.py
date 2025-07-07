@@ -2,7 +2,7 @@ from otree.api import *
 import random
 
 
-doc = """ """
+doc = """最後通牒ゲーム"""
 
 
 class C(BaseConstants):
@@ -15,29 +15,29 @@ class C(BaseConstants):
 
     CHOICE_LIST_SENTE = [
         [0, "あなた0ポイント、相手10ポイント"],
-        [100, "あなた1ポイント、相手9ポイント"],
-        [200, "あなた2ポイント、相手8ポイント"],
-        [300, "あなた3ポイント、相手7ポイント"],
-        [400, "あなた4ポイント、相手6ポイント"],
-        [500, "あなた5ポイント、相手5ポイント"],
-        [600, "あなた6ポイント、相手4ポイント"],
-        [700, "あなた7ポイント、相手3ポイント"],
-        [800, "あなた8ポイント、相手2ポイント"],
-        [900, "あなた9ポイント、相手1ポイント"],
-        [1000, "あなた10ポイント、相手0ポイント"],
+        [1, "あなた1ポイント、相手9ポイント"],
+        [2, "あなた2ポイント、相手8ポイント"],
+        [3, "あなた3ポイント、相手7ポイント"],
+        [4, "あなた4ポイント、相手6ポイント"],
+        [5, "あなた5ポイント、相手5ポイント"],
+        [6, "あなた6ポイント、相手4ポイント"],
+        [7, "あなた7ポイント、相手3ポイント"],
+        [8, "あなた8ポイント、相手2ポイント"],
+        [9, "あなた9ポイント、相手1ポイント"],
+        [10, "あなた10ポイント、相手0ポイント"],
     ]
 
     CHOICE_LIST_GOTE_TMP = [
-        [1000, "あなたに10ポイント"],
-        [900, "あなた9ポイント"],
-        [800, "あなた8ポイント"],
-        [700, "あなた7ポイント"],
-        [600, "あなた6ポイント"],
-        [500, "あなた5ポイント"],
-        [400, "あなた4ポイント"],
-        [300, "あなた3ポイント"],
-        [200, "あなた2ポイント"],
-        [100, "あなた1ポイント"],
+        [10, "あなたに10ポイント"],
+        [9, "あなた9ポイント"],
+        [8, "あなた8ポイント"],
+        [7, "あなた7ポイント"],
+        [6, "あなた6ポイント"],
+        [5, "あなた5ポイント"],
+        [4, "あなた4ポイント"],
+        [3, "あなた3ポイント"],
+        [2, "あなた2ポイント"],
+        [1, "あなた1ポイント"],
         [0, "あなた0ポイント"],
     ]
 
@@ -47,42 +47,42 @@ class C(BaseConstants):
 class Subsession(BaseSubsession):
     num_participants_p1 = models.IntegerField(initial=0)
     num_participants_p2 = models.IntegerField(initial=0)
-    num_1000 = models.IntegerField(initial=0)
-    num_900 = models.IntegerField(initial=0)
-    num_800 = models.IntegerField(initial=0)
-    num_700 = models.IntegerField(initial=0)
-    num_600 = models.IntegerField(initial=0)
-    num_500 = models.IntegerField(initial=0)
-    num_400 = models.IntegerField(initial=0)
-    num_300 = models.IntegerField(initial=0)
-    num_200 = models.IntegerField(initial=0)
-    num_100 = models.IntegerField(initial=0)
+    num_10 = models.IntegerField(initial=0)
+    num_9 = models.IntegerField(initial=0)
+    num_8 = models.IntegerField(initial=0)
+    num_7 = models.IntegerField(initial=0)
+    num_6 = models.IntegerField(initial=0)
+    num_5 = models.IntegerField(initial=0)
+    num_4 = models.IntegerField(initial=0)
+    num_3 = models.IntegerField(initial=0)
+    num_2 = models.IntegerField(initial=0)
+    num_1 = models.IntegerField(initial=0)
     num_0 = models.IntegerField(initial=0)
     num_accept = models.IntegerField(initial=0)
     num_reject = models.IntegerField(initial=0)
 
     #
     num_participants = models.IntegerField(initial=0)
-    num_1000_accept = models.IntegerField(initial=0)
-    num_1000_reject = models.IntegerField(initial=0)
-    num_900_accept = models.IntegerField(initial=0)
-    num_900_reject = models.IntegerField(initial=0)
-    num_800_accept = models.IntegerField(initial=0)
-    num_800_reject = models.IntegerField(initial=0)
-    num_700_accept = models.IntegerField(initial=0)
-    num_700_reject = models.IntegerField(initial=0)
-    num_600_accept = models.IntegerField(initial=0)
-    num_600_reject = models.IntegerField(initial=0)
-    num_500_accept = models.IntegerField(initial=0)
-    num_500_reject = models.IntegerField(initial=0)
-    num_400_accept = models.IntegerField(initial=0)
-    num_400_reject = models.IntegerField(initial=0)
-    num_300_accept = models.IntegerField(initial=0)
-    num_300_reject = models.IntegerField(initial=0)
-    num_200_accept = models.IntegerField(initial=0)
-    num_200_reject = models.IntegerField(initial=0)
-    num_100_accept = models.IntegerField(initial=0)
-    num_100_reject = models.IntegerField(initial=0)
+    num_10_accept = models.IntegerField(initial=0)
+    num_10_reject = models.IntegerField(initial=0)
+    num_9_accept = models.IntegerField(initial=0)
+    num_9_reject = models.IntegerField(initial=0)
+    num_8_accept = models.IntegerField(initial=0)
+    num_8_reject = models.IntegerField(initial=0)
+    num_7_accept = models.IntegerField(initial=0)
+    num_7_reject = models.IntegerField(initial=0)
+    num_6_accept = models.IntegerField(initial=0)
+    num_6_reject = models.IntegerField(initial=0)
+    num_5_accept = models.IntegerField(initial=0)
+    num_5_reject = models.IntegerField(initial=0)
+    num_4_accept = models.IntegerField(initial=0)
+    num_4_reject = models.IntegerField(initial=0)
+    num_3_accept = models.IntegerField(initial=0)
+    num_3_reject = models.IntegerField(initial=0)
+    num_2_accept = models.IntegerField(initial=0)
+    num_2_reject = models.IntegerField(initial=0)
+    num_1_accept = models.IntegerField(initial=0)
+    num_1_reject = models.IntegerField(initial=0)
     num_0_accept = models.IntegerField(initial=0)
     num_0_reject = models.IntegerField(initial=0)
 
@@ -132,26 +132,26 @@ def set_P1(player: Player):
         sub.num_participants_p1 += 1
         print("++++++++++++++++", group.p1_decision)
         s = group.p1_decision
-        if s == "1000":
-            sub.num_1000 += 1
-        elif s == "900":
-            sub.num_900 += 1
-        elif s == "800":
-            sub.num_800 += 1
-        elif s == "700":
-            sub.num_700 += 1
-        elif s == "600":
-            sub.num_600 += 1
-        elif s == "500":
-            sub.num_500 += 1
-        elif s == "400":
-            sub.num_400 += 1
-        elif s == "300":
-            sub.num_300 += 1
-        elif s == "200":
-            sub.num_200 += 1
-        elif s == "100":
-            sub.num_100 += 1
+        if s == "10":
+            sub.num_10 += 1
+        elif s == "9":
+            sub.num_9 += 1
+        elif s == "8":
+            sub.num_8 += 1
+        elif s == "7":
+            sub.num_7 += 1
+        elif s == "6":
+            sub.num_6 += 1
+        elif s == "5":
+            sub.num_5 += 1
+        elif s == "4":
+            sub.num_4 += 1
+        elif s == "3":
+            sub.num_3 += 1
+        elif s == "2":
+            sub.num_2 += 1
+        elif s == "1":
+            sub.num_1 += 1
         elif s == "0":
             sub.num_0 += 1
         else:
@@ -193,46 +193,46 @@ def set_pair(player: Player):
 
     sub.num_participants += 1
 
-    if p1 == "1000" and p2 == "0":
-        sub.num_1000_accept += 1
-    elif p1 == "1000" and p2 == "1":
-        sub.num_1000_reject += 1
-    elif p1 == "900" and p2 == "0":
-        sub.num_900_accept += 1
-    elif p1 == "900" and p2 == "1":
-        sub.num_900_reject += 1
-    elif p1 == "800" and p2 == "0":
-        sub.num_800_accept += 1
-    elif p1 == "800" and p2 == "1":
-        sub.num_800_reject += 1
-    elif p1 == "700" and p2 == "0":
+    if p1 == "10" and p2 == "0":
+        sub.num_10_accept += 1
+    elif p1 == "10" and p2 == "1":
+        sub.num_10_reject += 1
+    elif p1 == "9" and p2 == "0":
+        sub.num_9_accept += 1
+    elif p1 == "9" and p2 == "1":
+        sub.num_9_reject += 1
+    elif p1 == "8" and p2 == "0":
+        sub.num_8_accept += 1
+    elif p1 == "8" and p2 == "1":
+        sub.num_8_reject += 1
+    elif p1 == "7" and p2 == "0":
         sub.num_700_accept += 1
-    elif p1 == "700" and p2 == "1":
-        sub.num_700_reject += 1
-    elif p1 == "600" and p2 == "0":
-        sub.num_600_accept += 1
-    elif p1 == "600" and p2 == "1":
-        sub.num_600_reject += 1
-    elif p1 == "500" and p2 == "0":
-        sub.num_500_accept += 1
-    elif p1 == "500" and p2 == "1":
-        sub.num_500_reject += 1
-    elif p1 == "400" and p2 == "0":
-        sub.num_400_accept += 1
-    elif p1 == "400" and p2 == "1":
-        sub.num_400_reject += 1
-    elif p1 == "300" and p2 == "0":
-        sub.num_300_accept += 1
-    elif p1 == "300" and p2 == "1":
-        sub.num_300_reject += 1
-    elif p1 == "200" and p2 == "0":
-        sub.num_200_accept += 1
-    elif p1 == "200" and p2 == "1":
-        sub.num_200_reject += 1
-    elif p1 == "100" and p2 == "0":
-        sub.num_100_accept += 1
-    elif p1 == "100" and p2 == "1":
-        sub.num_100_reject += 1
+    elif p1 == "7" and p2 == "1":
+        sub.num_7_reject += 1
+    elif p1 == "6" and p2 == "0":
+        sub.num_6_accept += 1
+    elif p1 == "6" and p2 == "1":
+        sub.num_6_reject += 1
+    elif p1 == "5" and p2 == "0":
+        sub.num_5_accept += 1
+    elif p1 == "5" and p2 == "1":
+        sub.num_5_reject += 1
+    elif p1 == "4" and p2 == "0":
+        sub.num_4_accept += 1
+    elif p1 == "4" and p2 == "1":
+        sub.num_4_reject += 1
+    elif p1 == "3" and p2 == "0":
+        sub.num_3_accept += 1
+    elif p1 == "3" and p2 == "1":
+        sub.num_3_reject += 1
+    elif p1 == "2" and p2 == "0":
+        sub.num_2_accept += 1
+    elif p1 == "2" and p2 == "1":
+        sub.num_2_reject += 1
+    elif p1 == "1" and p2 == "0":
+        sub.num_1_accept += 1
+    elif p1 == "1" and p2 == "1":
+        sub.num_1_reject += 1
     elif p1 == "0" and p2 == "0":
         sub.num_0_accept += 1
     elif p1 == "0" and p2 == "1":
@@ -288,53 +288,53 @@ def graph(subsession: Subsession):
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
-    if sub.num_100_reject > 0:
-        tmp = round((sub.num_100_reject / sub.num_participants) * 100, 2)
+    if sub.num_1_reject > 0:
+        tmp = round((sub.num_1_reject / sub.num_participants) * 100, 2)
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
-    if sub.num_200_reject > 0:
-        tmp = round((sub.num_200_reject / sub.num_participants) * 100, 2)
+    if sub.num_2_reject > 0:
+        tmp = round((sub.num_2_reject / sub.num_participants) * 100, 2)
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
-    if sub.num_300_reject > 0:
-        tmp = round((sub.num_300_reject / sub.num_participants) * 100, 2)
+    if sub.num_3_reject > 0:
+        tmp = round((sub.num_3_reject / sub.num_participants) * 100, 2)
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
-    if sub.num_400_reject > 0:
-        tmp = round((sub.num_400_reject / sub.num_participants) * 100, 2)
+    if sub.num_4_reject > 0:
+        tmp = round((sub.num_4_reject / sub.num_participants) * 100, 2)
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
-    if sub.num_500_reject > 0:
-        tmp = round((sub.num_500_reject / sub.num_participants) * 100, 2)
+    if sub.num_5_reject > 0:
+        tmp = round((sub.num_5_reject / sub.num_participants) * 100, 2)
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
-    if sub.num_600_reject > 0:
-        tmp = round((sub.num_600_reject / sub.num_participants) * 100, 2)
+    if sub.num_6_reject > 0:
+        tmp = round((sub.num_6_reject / sub.num_participants) * 100, 2)
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
-    if sub.num_700_reject > 0:
-        tmp = round((sub.num_700_reject / sub.num_participants) * 100, 2)
+    if sub.num_7_reject > 0:
+        tmp = round((sub.num_7_reject / sub.num_participants) * 100, 2)
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
-    if sub.num_800_reject > 0:
-        tmp = round((sub.num_800_reject / sub.num_participants) * 100, 2)
+    if sub.num_8_reject > 0:
+        tmp = round((sub.num_8_reject / sub.num_participants) * 100, 2)
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
-    if sub.num_900_reject > 0:
-        tmp = round((sub.num_900_reject / sub.num_participants) * 100, 2)
+    if sub.num_9_reject > 0:
+        tmp = round((sub.num_9_reject / sub.num_participants) * 100, 2)
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
-    if sub.num_1000_reject > 0:
-        tmp = round((sub.num_1000_reject / sub.num_participants) * 100, 2)
+    if sub.num_10_reject > 0:
+        tmp = round((sub.num_10_reject / sub.num_participants) * 100, 2)
         graph_list_reject.append(tmp)
     else:
         graph_list_reject.append(0)
@@ -345,53 +345,53 @@ def graph(subsession: Subsession):
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
-    if sub.num_100_accept > 0:
-        tmp = round((sub.num_100_accept / sub.num_participants) * 100, 2)
+    if sub.num_1_accept > 0:
+        tmp = round((sub.num_1_accept / sub.num_participants) * 100, 2)
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
-    if sub.num_200_accept > 0:
-        tmp = round((sub.num_200_accept / sub.num_participants) * 100, 2)
+    if sub.num_2_accept > 0:
+        tmp = round((sub.num_2_accept / sub.num_participants) * 100, 2)
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
-    if sub.num_300_accept > 0:
-        tmp = round((sub.num_300_accept / sub.num_participants) * 100, 2)
+    if sub.num_3_accept > 0:
+        tmp = round((sub.num_3_accept / sub.num_participants) * 100, 2)
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
-    if sub.num_400_accept > 0:
-        tmp = round((sub.num_400_accept / sub.num_participants) * 100, 2)
+    if sub.num_4_accept > 0:
+        tmp = round((sub.num_4_accept / sub.num_participants) * 100, 2)
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
-    if sub.num_500_accept > 0:
-        tmp = round((sub.num_500_accept / sub.num_participants) * 100, 2)
+    if sub.num_5_accept > 0:
+        tmp = round((sub.num_5_accept / sub.num_participants) * 100, 2)
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
-    if sub.num_600_accept > 0:
-        tmp = round((sub.num_600_accept / sub.num_participants) * 100, 2)
+    if sub.num_6_accept > 0:
+        tmp = round((sub.num_6_accept / sub.num_participants) * 100, 2)
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
-    if sub.num_700_accept > 0:
-        tmp = round((sub.num_700_accept / sub.num_participants) * 100, 2)
+    if sub.num_7_accept > 0:
+        tmp = round((sub.num_7_accept / sub.num_participants) * 100, 2)
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
-    if sub.num_800_accept > 0:
-        tmp = round((sub.num_800_accept / sub.num_participants) * 100, 2)
+    if sub.num_8_accept > 0:
+        tmp = round((sub.num_8_accept / sub.num_participants) * 100, 2)
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
-    if sub.num_900_accept > 0:
-        tmp = round((sub.num_900_accept / sub.num_participants) * 100, 2)
+    if sub.num_9_accept > 0:
+        tmp = round((sub.num_9_accept / sub.num_participants) * 100, 2)
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
-    if sub.num_1000_accept > 0:
-        tmp = round((sub.num_1000_accept / sub.num_participants) * 100, 2)
+    if sub.num_10_accept > 0:
+        tmp = round((sub.num_10_accept / sub.num_participants) * 100, 2)
         graph_list_accept.append(tmp)
     else:
         graph_list_accept.append(0)
